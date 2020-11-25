@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>IMAGE PICKER</title>
+</head>
+
+<body style="margin: 250px">
+
+    <center>
+        <select onchange="gantigambar();" id="listgambar">
+			<option value="https://i0.wp.com/perpustakaan.id/wp-content/uploads/2018/03/Nama-Nama-Planet.jpg">PILIH NAMA-NAMA PLANET</option>
+            <option value=picture/merqurius.jpg>mercurius</option>
+            <option value=picture/venus.jpg>Venus</option>
+            <option value=picture/bumi.jpg>Earth</option>
+            <option value=picture/mars.jpg>Mars</option>
+            <option value=picture/jupiter.jpg>Jupiter</option>
+            <option value=picture/saturnus.jpg>Saturnus</option>
+            <option value=picture/venus.jpg>Uranus</option>
+            <option value=picture/neptunus.jpg>Neptunus</option>
+        
+        
+        </select>
+    </center>
+    <br/>
+    <img src="https://i0.wp.com/perpustakaan.id/wp-content/uploads/2018/03/Nama-Nama-Planet.jpg" style="width: 100%" id="gambar">
+
+</body>
+<script type="text/javascript">
+    function gantigambar() {
+        let gambar = document.getElementById("listgambar").value;
+        document.getElementById("gambar").src = gambar;
+        alert("Ini Gambar " + gambar);
+    }
+</script>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <style type="text/css">
+        body {
+            overflow-y: scroll;
+            margin: 0;
+            padding: 0;
+            font-family: verdana;
+            background-color: #3fc0f3;
+        }
+        
+        form {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: rgba(238, 253, 23, 0.877);
+            width: 250px;
+            margin: 250px auto;
+            padding: 80px;
+            text-align: center;
+            color: #ec6464;
+            border-radius: 200px 200px;
+            box-shadow: 4px 4px 30px #f16060;
+        }
+        
+        input {
+            margin: 10px;
+        }
+        
+        input.login {
+            background-color: #17e0ee;
+            color: #f36060;
+            font-family: verdana;
+            font-weight: bold;
+            border-radius: 15px;
+            padding: 10px 15px;
+            margin: 50px 15px auto 5px;
+            text-transform: uppercase;
+            transition: .1s;
+        }
+        
+        input.login:hover {
+            background-color: #6ebff8;
+            color: #8a1818;
+        }
+        
+        p {
+            text-align: center;
+            margin: 30px auto;
+            margin-top: 20px;
+            padding: 20px;
+            font-weight: bold;
+            color: #1f1ff1;
+            font-family: verdana;
+            background-color: #0096FF;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="profile.html" method="get" id="myForm" onsubmit=" return validasi()">
+
+        Username <input type="text" name="username" placeholder="username"> Password <input type="password" name="password" placeholder="password">
+        <input class="login" type="submit" name="submit" value="login">
+    </form>
+</body>
+<script type="text/javascript">
+    function validasi() {
+        var username = document.forms["myForm"]["username"].value;
+        var password = document.forms["myForm"]["password"].value;
+        if (username == "user" && password == "123") {
+            return true;
+        } else if (username == "" || password == "") {
+            alert("Masukan username dan password Anda");
+            return false;
+        } else {
+            alert("Username atau password yang Anda masukan SALAH");
+            return false;
+        }
+    }
+</script>
+
+</html>
